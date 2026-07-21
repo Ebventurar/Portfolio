@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edward B. Ventura | Systems & Industrial AI Engineer</title>
+
+    <!-- Inline SVG Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -22,17 +26,18 @@
             }
         }
     </script>
-    <!-- Separated External CSS Stylesheet -->
+    
+    <!-- External CSS Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-brand-dark text-slate-300 antialiased selection:bg-cyan-500 selection:text-slate-950">
 
-    <!-- NAVIGATION BAR WITH TRILINGUAL SELECTOR -->
+    <!-- NAVIGATION BAR -->
     <nav class="fixed top-0 w-full z-40 bg-brand-dark/80 backdrop-blur-md border-b border-brand-border">
         <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="#" class="text-lg font-bold tracking-tight text-white flex items-center gap-2">
                 <span class="w-3 h-3 bg-cyan-500 rounded-full animate-pulse"></span>
-                <span>Edward Ventura</span>
+                <span>EDWARD VENTURA</span>
             </a>
             
             <div class="flex items-center gap-6 text-sm font-medium">
@@ -42,7 +47,7 @@
                     <a href="#skills" data-i18n="navSkills" class="hover:text-cyan-400 transition-colors">Skills Matrix</a>
                 </div>
 
-                <!-- LANGUAGE SWITCHER (EN / NL / ES) -->
+                <!-- TRILINGUAL SWITCHER (EN / NL / ES) -->
                 <div class="flex items-center gap-1 font-mono text-xs bg-slate-900 p-1 rounded-lg border border-brand-border">
                     <button id="btn-en" onclick="setLanguage('en')" class="px-2 py-1 rounded bg-cyan-500 text-slate-950 font-bold">EN</button>
                     <button id="btn-nl" onclick="setLanguage('nl')" class="px-2 py-1 rounded bg-slate-800 text-slate-400">NL</button>
@@ -82,7 +87,7 @@
                         👁️ Edge Computer Vision & Quality Control
                     </div>
                     <div data-i18n="badgeLoc" class="px-3.5 py-2 rounded-lg bg-brand-card border border-brand-border flex items-center gap-2">
-                        📍 Enschede, Netherlands
+                        📍 Enschede, Netherlands | Work Authorized
                     </div>
                 </div>
 
@@ -93,11 +98,14 @@
                 </div>
             </div>
 
-            <!-- PROFILE PHOTO PLACEHOLDER -->
+            <!-- PROFILE PHOTO -->
             <div class="lg:col-span-4 flex justify-center">
                 <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl p-2 bg-gradient-to-b from-cyan-500/30 to-slate-800/20 border border-cyan-500/30 shadow-2xl">
                     <div class="w-full h-full rounded-xl overflow-hidden bg-brand-card border border-brand-border flex flex-col items-center justify-center text-center p-4 relative group">
-                        <img src="assets/img/profile-photo.png" onerror="this.src='https://via.placeholder.com/400x400/111827/06B6D4?text=Edward+Ventura+Photo'" alt="Edward Ventura" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <img src="assets/img/profile-photo.jpg" alt="Edward Ventura" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300">
+                        <div data-i18n="imgSlot" class="absolute inset-x-0 bottom-0 bg-slate-950/80 p-2 text-[10px] font-mono text-cyan-400 border-t border-brand-border">
+                            [ PROFILE PHOTO SLOT ]
+                        </div>
                     </div>
                 </div>
             </div>
@@ -120,10 +128,10 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
             <!-- CARD 1: EDGE AI (CASE STUDY) -->
-            <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden flex flex-col justify-between hover:border-cyan-500/50 transition-all group">
+            <div onclick="openModal('modal-project1')" class="bg-brand-card border border-brand-border rounded-xl overflow-hidden flex flex-col justify-between hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/10 transition-all cursor-pointer group">
                 <div>
                     <div class="h-48 w-full bg-slate-900 border-b border-brand-border relative overflow-hidden">
-                        <img src="assets/img/Factory IO.png" onerror="this.src='https://via.placeholder.com/600x350/0b0f17/06b6d4?text=Edge+AI+Vision+Inspection'" alt="Edge AI Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <img src="assets/img/Factory IO.png" alt="Edge AI Project Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <span data-i18n="badgeCaseStudy" class="absolute top-3 right-3 px-2 py-0.5 text-[10px] font-mono font-bold rounded bg-purple-950 text-purple-300 border border-purple-800">
                             Applied R&D / Case Study
                         </span>
@@ -145,17 +153,17 @@
                 </div>
 
                 <div class="px-6 pb-6">
-                    <button onclick="openModal('modal-project1')" data-i18n="btnViewDetails" class="w-full py-2.5 rounded-lg bg-slate-800 hover:bg-cyan-500 hover:text-slate-950 text-white font-semibold text-sm transition-all text-center">
-                        View Project Details
-                    </button>
+                    <span data-i18n="btnViewDetails" class="block w-full py-2.5 rounded-lg bg-slate-800 group-hover:bg-cyan-500 group-hover:text-slate-950 text-white font-semibold text-sm transition-all text-center">
+                        View Technical Analysis
+                    </span>
                 </div>
             </div>
 
             <!-- CARD 2: INDUSTRIAL PLC / HMI (FIELD IMPLEMENTATION) -->
-            <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden flex flex-col justify-between hover:border-cyan-500/50 transition-all group">
+            <div onclick="openModal('modal-project2')" class="bg-brand-card border border-brand-border rounded-xl overflow-hidden flex flex-col justify-between hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/10 transition-all cursor-pointer group">
                 <div>
                     <div class="h-48 w-full bg-slate-900 border-b border-brand-border relative overflow-hidden">
-                        <img src="assets/img/main-HMI.png" onerror="this.src='https://via.placeholder.com/600x350/0b0f17/06b6d4?text=Stone+Cutting+PLC+HMI'" alt="Stone Cutting PLC" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <img src="assets/img/P2-HMI.png" alt="Stone Cutting PLC Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <span data-i18n="badgeField" class="absolute top-3 right-3 px-2 py-0.5 text-[10px] font-mono font-bold rounded bg-emerald-950 text-emerald-300 border border-emerald-800">
                             Field Implementation
                         </span>
@@ -177,17 +185,17 @@
                 </div>
 
                 <div class="px-6 pb-6">
-                    <button onclick="openModal('modal-project2')" data-i18n="btnViewField" class="w-full py-2.5 rounded-lg bg-slate-800 hover:bg-cyan-500 hover:text-slate-950 text-white font-semibold text-sm transition-all text-center">
+                    <span data-i18n="btnViewField" class="block w-full py-2.5 rounded-lg bg-slate-800 group-hover:bg-cyan-500 group-hover:text-slate-950 text-white font-semibold text-sm transition-all text-center">
                         View Field Implementation
-                    </button>
+                    </span>
                 </div>
             </div>
 
             <!-- CARD 3: CHILLER PUMP (FIELD IMPLEMENTATION) -->
-            <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden flex flex-col justify-between hover:border-cyan-500/50 transition-all group">
+            <div onclick="openModal('modal-project3')" class="bg-brand-card border border-brand-border rounded-xl overflow-hidden flex flex-col justify-between hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/10 transition-all cursor-pointer group">
                 <div>
                     <div class="h-48 w-full bg-slate-900 border-b border-brand-border relative overflow-hidden">
-                        <img src="assets/img/Pe-Logo.png" onerror="this.src='https://via.placeholder.com/600x350/0b0f17/06b6d4?text=Chiller+Pumps+Siemens+LOGO'" alt="Chiller Pump System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <img src="assets/img/Pe-Logo.png " alt="Chiller Pump System Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                         <span data-i18n="badgeField" class="absolute top-3 right-3 px-2 py-0.5 text-[10px] font-mono font-bold rounded bg-emerald-950 text-emerald-300 border border-emerald-800">
                             Field Implementation
                         </span>
@@ -209,9 +217,9 @@
                 </div>
 
                 <div class="px-6 pb-6">
-                    <button onclick="openModal('modal-project3')" data-i18n="btnViewField" class="w-full py-2.5 rounded-lg bg-slate-800 hover:bg-cyan-500 hover:text-slate-950 text-white font-semibold text-sm transition-all text-center">
+                    <span data-i18n="btnViewField" class="block w-full py-2.5 rounded-lg bg-slate-800 group-hover:bg-cyan-500 group-hover:text-slate-950 text-white font-semibold text-sm transition-all text-center">
                         View Field Implementation
-                    </button>
+                    </span>
                 </div>
             </div>
 
@@ -251,7 +259,205 @@
         </div>
     </section>
 
-    <!-- Separated External JavaScript File -->
+<!-- ==================== MODALS SECTION ==================== -->
+
+    <!-- MODAL 1: EDGE AI & COMPUTER VISION -->
+    <div id="modal-project1" class="fixed inset-0 z-50 hidden bg-slate-950/85 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-brand-card border border-brand-border rounded-xl w-full max-w-4xl max-h-[90vh] overflow-y-auto p-6 md:p-8 relative text-slate-300">
+            <button onclick="closeModal('modal-project1')" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-white text-lg font-mono">✕</button>
+            
+            <div class="mb-6">
+                <span data-i18n="badgeCaseStudy" class="px-2.5 py-1 text-xs font-mono font-semibold rounded bg-purple-950 text-purple-300 border border-purple-800">APPLIED R&D / CASE STUDY</span>
+                <h2 data-i18n="p1Title" class="text-2xl md:text-3xl font-bold text-white mt-2">Photovoltaic Defect Inspection System</h2>
+            </div>
+
+            <!-- GALLERY -->
+            <div class="mb-8">
+                <h4 class="text-xs font-mono text-cyan-400 uppercase tracking-wider mb-3">Project Visuals & Technical Plots</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-slate-900 border border-slate-800 rounded-lg overflow-hidden">
+                        <img src="assets/img/Cells.png" alt="EL Image Preprocessing" class="w-full h-32 object-cover">
+                        <p class="p-2 text-[11px] font-mono text-slate-400 border-t border-slate-800">Fig 1. CLAHE Contrast Enhancement</p>
+                    </div>
+                    <div class="bg-slate-900 border border-slate-800 rounded-lg overflow-hidden">
+                        <img src="assets/img/CNN.png" alt="CNN Architecture" class="w-full h-32 object-cover">
+                        <p class="p-2 text-[11px] font-mono text-slate-400 border-t border-slate-800">Fig 2. Custom CNN Architecture</p>
+                    </div>
+                    <div class="bg-slate-900 border border-slate-800 rounded-lg overflow-hidden">
+                        <img src="assets/img/Trainig.png" alt="Training Model" class="w-full h-32 object-cover">
+                        <p class="p-2 text-[11px] font-mono text-slate-400 border-t border-slate-800">Fig 3. Training Model</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EXTENDED TECHNICAL DETAILS -->
+            <div class="space-y-6 text-sm leading-relaxed border-t border-brand-border pt-6">
+                <div>
+                    <h3 class="text-base font-bold text-white mb-2 font-mono flex items-center gap-2">
+                        <span class="text-cyan-400">01.</span> System Problem & Context
+                    </h3>
+                    <p data-i18n="p1Context" class="text-slate-300">
+                        Microcracks and finger interruptions in solar cells are invisible to the naked eye under visible light. Electroluminescence (EL) imaging reveals these subsurface defects, but manual optical inspection on high-throughput manufacturing lines introduces high latency, human fatigue, and inconsistent fault classification.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-base font-bold text-white mb-2 font-mono flex items-center gap-2">
+                        <span class="text-cyan-400">02.</span> Engineering & Algorithm Architecture
+                    </h3>
+                    <ul class="list-disc list-inside space-y-2 text-slate-300">
+                        <li><strong class="text-white">Image Preprocessing Pipeline:</strong> Implemented OpenCV-based Contrast Limited Adaptive Histogram Equalization (CLAHE) and spatial normalization to mitigate uneven illumination artifacts across monocrystalline and polycrystalline EL samples.</li>
+                        <li><strong class="text-white">Neural Network Design:</strong> Constructed and trained a 3-Block Convolutional Neural Network (CNN) architecture using TensorFlow/Keras optimized with dropout and L2 regularization to prevent overfitting on subtle microcrack feature sets.</li>
+                        <li><strong class="text-white">Inference Optimization:</strong> Calibrated probability decision thresholds specifically prioritizing Recall over Precision to prevent false negatives in high-cost PV assembly lines.</li>
+                    </ul>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                    <div class="p-4 rounded-lg bg-slate-900/90 border border-slate-800">
+                        <p class="text-xs font-mono text-cyan-400 uppercase font-semibold">Technical Stack</p>
+                        <p class="text-xs text-slate-300 font-mono mt-1">Python, TensorFlow / Keras, OpenCV, NumPy, Matplotlib, Pandas</p>
+                    </div>
+                    <div class="p-4 rounded-lg bg-slate-900/90 border border-slate-800">
+                        <p class="text-xs font-mono text-cyan-400 uppercase font-semibold">Measured Key Results</p>
+                        <p class="text-xs text-slate-300 font-mono mt-1">70% Defect Recall | 94.9ms Single-Batch Inference Latency | AUC-ROC 0.78</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: INDUSTRIAL PLC / HMI -->
+    <div id="modal-project2" class="fixed inset-0 z-50 hidden bg-slate-950/85 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-brand-card border border-brand-border rounded-xl w-full max-w-4xl max-h-[90vh] overflow-y-auto p-6 md:p-8 relative text-slate-300">
+            <button onclick="closeModal('modal-project2')" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-white text-lg font-mono">✕</button>
+            
+            <div class="mb-6">
+                <span data-i18n="badgeField" class="px-2.5 py-1 text-xs font-mono font-semibold rounded bg-emerald-950 text-emerald-300 border border-emerald-800">FIELD IMPLEMENTATION</span>
+                <h2 data-i18n="p2Title" class="text-2xl md:text-3xl font-bold text-white mt-2">Automated Stone-Cutting PLC & HMI System</h2>
+            </div>
+
+            <!-- GALLERY -->
+            <div class="mb-8">
+                <h4 class="text-xs font-mono text-cyan-400 uppercase tracking-wider mb-3">Field Documentation & Equipment Photos</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-slate-900 border border-slate-800 rounded-lg overflow-hidden">
+                        <img src="assets/img/P2-planta.png" alt="Machine Frame" class="w-full h-32 object-cover">
+                        <p class="p-2 text-[11px] font-mono text-slate-400 border-t border-slate-800">Photo 1. Stone Cutting Mechanical Frame</p>
+                    </div>
+                    <div class="bg-slate-900 border border-slate-800 rounded-lg overflow-hidden">
+                        <img src="assets/img/P2-tablero.png" alt="PLC Cabinet" class="w-full h-32 object-cover">
+                        <p class="p-2 text-[11px] font-mono text-slate-400 border-t border-slate-800">Photo 2. Kinco PLC & VFD Control Panel</p>
+                    </div>
+                    <div class="bg-slate-900 border border-slate-800 rounded-lg overflow-hidden">
+                        <img src="assets/img/main-HMI.png" alt="HMI Screen" class="w-full h-32 object-cover">
+                        <p class="p-2 text-[11px] font-mono text-slate-400 border-t border-slate-800">Photo 3. Real-time HMI Operating Screen</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EXTENDED TECHNICAL DETAILS -->
+            <div class="space-y-6 text-sm leading-relaxed border-t border-brand-border pt-6">
+                <div>
+                    <h3 class="text-base font-bold text-white mb-2 font-mono flex items-center gap-2">
+                        <span class="text-cyan-400">01.</span> Operational Requirements & Challenge
+                    </h3>
+                    <p data-i18n="p2Context" class="text-slate-300">
+                        An industrial stone processing machine required full control modernization to transition from legacy manual relay switching to an automated, deterministic system. The main challenges included extreme mechanical vibration, high inertia disk blade startup torque, and severe blade overheating risks if cooling water flow stalled.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-base font-bold text-white mb-2 font-mono flex items-center gap-2">
+                        <span class="text-cyan-400">02.</span> Control Engineering Solution
+                    </h3>
+                    <ul class="list-disc list-inside space-y-2 text-slate-300">
+                        <li><strong class="text-white">PLC & Modbus Architecture:</strong> Programmed a Kinco PLC using Ladder Diagram (LD) logic for dual-blade axial motion coordination, integrating hardware limit switches and rotary encoder feedback.</li>
+                        <li><strong class="text-white">VFD Speed Regulation:</strong> Integrated Variable Frequency Drives (VFDs) controlling main saw blade induction motors, implementing smooth acceleration/deceleration ramps to mitigate mechanical shock and peak current draw.</li>
+                        <li><strong class="text-white">Safety Interlocks & Cooling System:</strong> Engineered mandatory hardware/software safety interlocks requiring verified hydraulic cooling pump pressure before allowing disk engagement, preventing catastrophic tool failure.</li>
+                        <li><strong class="text-white">Industrial HMI UI/UX:</strong> Designed human-machine interface screens displaying real-time operational parameters, emergency stop status, motor current consumption, and fault diagnostics.</li>
+                    </ul>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                    <div class="p-4 rounded-lg bg-slate-900/90 border border-slate-800">
+                        <p class="text-xs font-mono text-cyan-400 uppercase font-semibold">Hardware & Protocols</p>
+                        <p class="text-xs text-slate-300 font-mono mt-1">Kinco PLC, Kinco HMI, VFD Motor Controllers, Modbus RTU (RS-485)</p>
+                    </div>
+                    <div class="p-4 rounded-lg bg-slate-900/90 border border-slate-800">
+                        <p class="text-xs font-mono text-cyan-400 uppercase font-semibold">Field Commissioning Result</p>
+                        <p class="text-xs text-slate-300 font-mono mt-1">±0.5 cm Axis Positioning Accuracy | Zero Thermal Blade Damage | Fully Deployed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 3: CHILLER PUMP -->
+    <div id="modal-project3" class="fixed inset-0 z-50 hidden bg-slate-950/85 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-brand-card border border-brand-border rounded-xl w-full max-w-4xl max-h-[90vh] overflow-y-auto p-6 md:p-8 relative text-slate-300">
+            <button onclick="closeModal('modal-project3')" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-white text-lg font-mono">✕</button>
+            
+            <div class="mb-6">
+                <span data-i18n="badgeField" class="px-2.5 py-1 text-xs font-mono font-semibold rounded bg-emerald-950 text-emerald-300 border border-emerald-800">FIELD IMPLEMENTATION</span>
+                <h2 data-i18n="p3Title" class="text-2xl md:text-3xl font-bold text-white mt-2">Sequential Chiller Pump Management</h2>
+            </div>
+
+            <!-- GALLERY -->
+            <div class="mb-8">
+                <h4 class="text-xs font-mono text-cyan-400 uppercase tracking-wider mb-3">Installation & System Diagrams</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-slate-900 border border-slate-800 rounded-lg overflow-hidden">
+                        <img src="assets/img/P3-Chillerr.png" alt="Pump Station" class="w-full h-32 object-cover">
+                        <p class="p-2 text-[11px] font-mono text-slate-400 border-t border-slate-800">Photo 1. 3-Pump Industrial Chiller Station</p>
+                    </div>
+                    <div class="bg-slate-900 border border-slate-800 rounded-lg overflow-hidden">
+                        <img src="assets/img/Tablero chiller.jpg" alt="Siemens LOGO Panel" class="w-full h-32 object-cover">
+                        <p class="p-2 text-[11px] font-mono text-slate-400 border-t border-slate-800">Photo 2. Siemens LOGO! PLC Control Cabinet</p>
+                    </div>
+                    <div class="bg-slate-900 border border-slate-800 rounded-lg overflow-hidden">
+                        <img src="assets/img/Arrancado Programado 3 Bombas V2.jpg" alt="Logic Diagram" class="w-full h-32 object-cover">
+                        <p class="p-2 text-[11px] font-mono text-slate-400 border-t border-slate-800">Fig 3. Staggered Delay Logic Diagram</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EXTENDED TECHNICAL DETAILS -->
+            <div class="space-y-6 text-sm leading-relaxed border-t border-brand-border pt-6">
+                <div>
+                    <h3 class="text-base font-bold text-white mb-2 font-mono flex items-center gap-2">
+                        <span class="text-cyan-400">01.</span> Facility Infrastructure Need
+                    </h3>
+                    <p data-i18n="p3Context" class="text-slate-300">
+                        Simultaneous direct-on-line (DOL) startup of multiple high-power chiller circulating pumps caused severe voltage drops and inrush current spikes across the building's electrical distribution panel. Furthermore, uneven pump usage led to premature mechanical seal wear on primary units.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-base font-bold text-white mb-2 font-mono flex items-center gap-2">
+                        <span class="text-cyan-400">02.</span> Discrete Logic Implementation
+                    </h3>
+                    <ul class="list-disc list-inside space-y-2 text-slate-300">
+                        <li><strong class="text-white">Siemens LOGO! Logic Controller:</strong> Programmed Functional Block Diagrams (FBD) managing a 3-stage staggered startup sequence with configurable delay timers ($t_{delay} = 15s$) to flatten inrush current transients.</li>
+                        <li><strong class="text-white">Equally Distributed Duty Cycle:</strong> Implemented automatic lead-lag rotation logic shifting primary operational duty across all 3 pumps on a schedule, balancing cumulative operating hours.</li>
+                        <li><strong class="text-white">Fault Monitoring & Auto-Failover:</strong> Configured thermal overload relay discrete inputs. If a running pump trips, the logic instantly engages the standby unit and triggers an audible visual alarm on the panel.</li>
+                    </ul>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                    <div class="p-4 rounded-lg bg-slate-900/90 border border-slate-800">
+                        <p class="text-xs font-mono text-cyan-400 uppercase font-semibold">Hardware & Software</p>
+                        <p class="text-xs text-slate-300 font-mono mt-1">Siemens LOGO! 8 Micro-PLC, LOGO! Soft Comfort (FBD), Thermal Relays</p>
+                    </div>
+                    <div class="p-4 rounded-lg bg-slate-900/90 border border-slate-800">
+                        <p class="text-xs font-mono text-cyan-400 uppercase font-semibold">Operational Impact</p>
+                        <p class="text-xs text-slate-300 font-mono mt-1">Eliminated Grid Current Spikes | Automatic Backup Shift | Zero Down-time</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript File -->
     <script src="js/main.js"></script>
 </body>
 </html>
