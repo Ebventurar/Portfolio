@@ -34,7 +34,11 @@
       "title": "Amazon Clone",
       "description": "A replica of the Amazon website to demonstrate knowledge of HTML and CSS. It is a learning project."
     },
+    "project-5":{
+      "title": "Corporate Page",
+      "description": "Vaxtem Group is an engineering firm that offers comprehensive energy and automation solutions for the industry. Its expert team applies leading international standards to ensure operational efficiency and safety in every project, driving productivity and growth for its clients."
+    },
   "footer": {
-    "title": "Social Networks"
+    "title": "Social Media"
   }
 }
