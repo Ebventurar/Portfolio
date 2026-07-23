@@ -258,7 +258,6 @@ main .p_home a, main #sobremi_descripcion a {
   grid-template-rows: 1fr 5fr 3fr 2fr;
   align-items: center;
   width: 100%;
-  height: 30em;
   background-color: #fff;
   border-radius: 25px;
   padding: 25px;
@@ -303,9 +302,7 @@ main .p_home a, main #sobremi_descripcion a {
   #grid_proyectos {
     grid-template-columns: 60%;
   }
-  .cont_proyecto {
-    height: auto;
-  }
+
 }
 @media (max-width: 850px) {
   #grid_proyectos {
