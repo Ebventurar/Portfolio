@@ -1,0 +1,40 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos"
+  },
+"home": {
+  "title": "Hola. Soy Edward.<br>Un Diseñador Web.",
+  "description": "Me apasiona crear soluciones visuales innovadoras y funcionales para todo tipo de proyectos. En esta web podrás ver algunos de mis trabajos más destacados, así como conocer más sobre mí y mis servicios.<br><br><br> Si quieres saber más sobre mis habilidades y mis valores, te invito a visitar la sección <strong><a href=\"about.html\">Sobre mí</a></strong>. Allí también encontrarás mis datos de contacto y mis redes sociales.<br><br><br>¡Espero que disfrutes de mi portafolio y que te pongas en contacto conmigo si necesitas un diseño a tu medida!"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "description": "Hola, mi nombre es Edward Ventura y soy un estudiante de ingeniería en sistemas con mención en programación. Me apasiona el desarrollo web y estoy aprendiendo constantemente nuevas tecnologías y herramientas para crear sitios web dinámicos, funcionales y atractivos. <br><br><br> Me gustaría compartir mis conocimientos y experiencias con otros entusiastas del desarrollo web, así como aprender de ellos y colaborar en proyectos interesantes. Si quieres saber más sobre mí, puedes visitar mi <strong><a href=\"projects.html\">portafolio</a></strong>, donde encontrarás algunos de mis trabajos y proyectos personales.<br><br><br> Si te interesa contactarme, puedes enviarme un mensaje a mi correo electrónico o a mi número personal. También puedes seguirme en mis redes sociales que están en el pie de página. Estaré encantado de conversar contigo y conocer tus ideas, sugerencias o propuestas. <br>¡Espero que disfrutes de mi página web y gracias por tu visita!",
+    "title-contact": "Contáctame",
+    "contact-email": "Correo electrónico",
+    "contact-phone": "Número personal"
+  },
+  "projects": {
+    "title": "Proyectos"
+  },
+    "project-1":{
+      "title": "Página Corporativa",
+      "description": "Flexipacks Solutions C.A. se dedica a la transformación y coextrusión de plásticos de baja y alta densidad para la producción de empaques flexibles, con o sin impresión, orientados al mercado agroindustrial y alimenticio de consumo masivo."
+    },
+    "project-2":{
+      "title": "Página Corporativa",
+      "description": "Fly Creative es una agencia de marketing digital que optimiza la presencia online de la marca a través de estrategias personalizadas en redes sociales."
+    },
+    "project-3":{
+      "title": "Portafolio",
+      "description": "Portafolio profesional de una Community Manager y Social Media Manager, con su experiencia y proyectos destacados."
+    },
+    "project-4":{
+      "title": "Amazon Clone",
+      "description": "Una réplica del sitio web de Amazon para demostrar conocimientos de HTML y CSS. Es un proyecto de aprendizaje."
+    },
+  "footer": {
+    "title": "Redes Sociales"
+  }
+}

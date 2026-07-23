@@ -1,0 +1,40 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects"
+  },
+  "home": {
+  "title": "Hello. I'm Edward.<br>A Web Designer.",
+  "description": "I'm passionate about creating innovative and functional visual solutions for all types of projects. On this website, you can see some of my most outstanding works, as well as learn more about me and my services.<br><br><br> If you want to know more about my skills and values, I invite you to visit the section <strong><a href=\"about.html\">About me</strong></a>. There you will also find my contact information and social networks.<br><br><br> I hope you enjoy my portfolio and get in touch with me if you need a custom design!"
+  },
+  "about": {
+    "title": "About me",
+    "description": "Hello, my name is Edward Ventura and I'm a systems engineering student with a focus on programming. I'm passionate about web development and I'm constantly learning new technologies and tools to create dynamic, functional and attractive websites. <br><br><br> I'd love to share my knowledge and experiences with other web development enthusiasts, as well as learn from them and collaborate on interesting projects. If you want to know more about me, you can visit my <strong><a href=\"projects.html\">portfolio</a></strong>, where you'll find some of my personal projects and works.<br><br><br> If you're interested in contacting me, you can send me a message to my email or my personal phone number. You can also follow me on my social media profiles, which are at the bottom of the page. I'll be happy to chat with you and hear your ideas, suggestions or proposals. <br>I hope you enjoy my website and thanks for visiting!",
+    "title-contact": "Contact me",
+    "contact-email": "Email",
+    "contact-phone": "Phone"
+  },
+  "projects": {
+    "title": "Projects"
+  },
+    "project-1":{
+      "title": "Corporate Page",
+      "description": "Flexipacks Solutions C.A. is dedicated to the transformation and coextrusion of low and high density plastics for the production of flexible packaging, with or without printing, aimed at the agro-industrial and food market of mass consumption."
+    },
+    "project-2":{
+      "title": "Corporate Page",
+      "description": "Fly Creative is a digital marketing agency that optimizes brand online presence through personalized social media strategies."
+    },
+    "project-3":{
+      "title": "Portfolio",
+      "description": "Professional portfolio for a Community Manager and Social Media Manager, featuring her experience and highlighted projects."
+    },
+    "project-4":{
+      "title": "Amazon Clone",
+      "description": "A replica of the Amazon website to demonstrate knowledge of HTML and CSS. It is a learning project."
+    },
+  "footer": {
+    "title": "Social Networks"
+  }
+}
